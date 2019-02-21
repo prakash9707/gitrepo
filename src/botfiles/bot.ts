@@ -111,7 +111,7 @@ export class AzureUsageBot {
                     let b = "dsfdasfdsaf";
                     b += a;
                     console.log(b);
-                    console.log("higuys");
+                    console.log("helloguys");
                     break;
                 default:
                     await context.sendActivity('Sorry, I am not able to understand');
