@@ -106,7 +106,8 @@ export class AzureUsageBot {
                 
                 case Trend:
                     filteredData = convertData(getLuisData);
-                    
+                    var a = 100;
+                    console.log(a);
                     
                     break;
                 default:
