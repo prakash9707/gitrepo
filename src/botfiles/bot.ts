@@ -108,6 +108,9 @@ export class AzureUsageBot {
                     filteredData = convertData(getLuisData);
                     var a = 1000000;
                     console.log(a);
+                    let b = "dsfdasfdsaf";
+                    b += a;
+                    console.log(b);
                     
                     break;
                 default:
