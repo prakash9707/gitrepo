@@ -106,12 +106,7 @@ export class AzureUsageBot {
                 
                 case Trend:
                     filteredData = convertData(getLuisData);
-                    var a = 1000000;
-                    console.log(a);
-                    let b = "dsfdasfdsaf";
-                    b += a;
-                    console.log(b);
-                    console.log("helloguys");
+                    
                     break;
                 default:
                     await context.sendActivity('Sorry, I am not able to understand');
