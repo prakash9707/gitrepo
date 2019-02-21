@@ -109,6 +109,7 @@ export class AzureUsageBot {
                     var a = 10;
                     console.log(a);
                     
+                    
                     break;
                 default:
                     await context.sendActivity('Sorry, I am not able to understand');
