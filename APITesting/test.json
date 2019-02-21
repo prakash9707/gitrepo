@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "b5553094-8c4f-42eb-b1c8-e24df9f37d2a",
+		"name": "New",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST AzureData",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c1103156-b02b-4ce1-8406-b6c901f08882",
+						"exec": [
+							"pm.test(\"Response time is less than 250000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(25000);",
+							"});",
+							"pm.test(\"Successful POST request with status code as 200\", function () {",
+							"pm.test(\"Body includes the values keys\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"keys\");",
+							"});",
+							"    pm.expect(pm.response.code).to.be.oneOf([201,200]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ii1zeE1KTUxDSURXTVRQdlp5SjZ0eC1DRHh3MCIsImtpZCI6Ii1zeE1KTUxDSURXTVRQdlp5SjZ0eC1DRHh3MCJ9.eyJhdWQiOiJodHRwczovL21hbmFnZW1lbnQuY29yZS53aW5kb3dzLm5ldC8iLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC85N2E4MGE3Mi1mZWMyLTQ1NzctODFhZC0yZGEyODgwZmY3YmIvIiwiaWF0IjoxNTQ5NTE5Nzc4LCJuYmYiOjE1NDk1MTk3NzgsImV4cCI6MTU0OTUyMzY3OCwiYWNyIjoiMSIsImFpbyI6IjQySmdZRmpGdktUTHdjSTQrZnFpZ0NOLzY2NzFubHFSVXBySDFhamJ3R05rSWp0bGh4WUEiLCJhbHRzZWNpZCI6IjE6bGl2ZS5jb206MDAwMzAwMDAwNEQ4OERFQyIsImFtciI6WyJwd2QiXSwiYXBwaWQiOiI3ZjU5YTc3My0yZWFmLTQyOWMtYTA1OS01MGZjNWJiMjhiNDQiLCJhcHBpZGFjciI6IjIiLCJlbWFpbCI6Im1hZ2VzaEBwdXJwbGVzbGF0ZS5pbiIsImZhbWlseV9uYW1lIjoiNzc5YjE3ZjAtMjc1Ny00YjgyLThjNWYtODkwYjUyMzQ3NzUxIiwiZ2l2ZW5fbmFtZSI6IjEwYzA5YmZkLTBiMzEtNDMwYi05NGIxLTJiNGNhNTA5OGVkNiIsImdyb3VwcyI6WyIzNDcxY2ZjNi1jNmQ5LTRkM2QtYWFlNS1kMTZiODA1OTA1YTMiXSwiaWRwIjoibGl2ZS5jb20iLCJpcGFkZHIiOiIyNy41Ljg2LjIwNiIsIm5hbWUiOiIxMGMwOWJmZC0wYjMxLTQzMGItOTRiMS0yYjRjYTUwOThlZDYgNzc5YjE3ZjAtMjc1Ny00YjgyLThjNWYtODkwYjUyMzQ3NzUxIiwib2lkIjoiZjQ3NGEyMjEtZDFkOC00YWU3LTg3ZWMtMjljNjgyN2YyZmJlIiwicHVpZCI6IjEwMDNCRkZEOUZFRjA0Q0QiLCJzY3AiOiJ1c2VyX2ltcGVyc29uYXRpb24iLCJzdWIiOiJTQmw2RHUtSndZZU1sNXRJTDQxMDFjc0thTk80RXdSdzNJSnpmOVRLMUNnIiwidGlkIjoiOTdhODBhNzItZmVjMi00NTc3LTgxYWQtMmRhMjg4MGZmN2JiIiwidW5pcXVlX25hbWUiOiJsaXZlLmNvbSNtYWdlc2hAcHVycGxlc2xhdGUuaW4iLCJ1dGkiOiJqbXhCOXhOQlJFNkZ6NHdqdU5JS0FBIiwidmVyIjoiMS4wIiwid2lkcyI6WyI2MmU5MDM5NC02OWY1LTQyMzctOTE5MC0wMTIxNzcxNDVlMTAiXX0.JJ6mZVGgQP_RCxuV6mPsoriD6AinQVTW4_CcBBrX3CIMzDx46W_B9YLMdJ-efMoYDkoLEeL72n0iCfev5RxtkPZ8-VtikVcH-nPzNRtCC8JgCI6l4nMcct517xdXRU4RsFSDtLgvbWT-OsSAVrg5gW6TzcMTPbtM-HRGiSX8cNypBRHTM934H0TzJbVeltP29A3oDmNy8NvkqTsJ500b1YwzcTbUFPSdzOF8-0Ty_G547hvn4i6uGhB8UlTKXecGiq-QJ79cLas3eilNhfpYINLa6SIQpV1y907AHEqRzoikvM9iKimpv3BygBgzLvePqIPQtwVtU_cborazI2zIZg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"filteredData\":{\n\t\"filter\": [ { \"category\": \"ResourceGroup\", \"value\": \"remy-demo\" } ],\n  \"DateRange\": \"CurrentPeriod\",\n  \"intent\": \"ResourceGroupCost\"\n}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/azureData",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"azureData"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
